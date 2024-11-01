@@ -1,8 +1,8 @@
 # Liskov Substitution Principle
 
-1. Quel élément indique un code smell dans la classe [FillingStation](src/main/java/com/codurance/lsp/FillingStation.java) par exemple un directeur ?
+1. Quel élément indique un code smell dans la classe [FillingStation](src/main/java/com/codermaycry/lsp/FillingStation.java) par exemple un directeur ?
 
-2. Pourquoi les méthodes abstraites `fillUpWithFuel` et `chargeBattery` de la classe [Vehicle](src/main/java/com/codurance/lsp/Vehicle.java) sont-elles problématiques ?
+2. Pourquoi les méthodes abstraites `fillUpWithFuel` et `chargeBattery` de la classe [Vehicle](src/main/java/com/codermaycry/lsp/Vehicle.java) sont-elles problématiques ?
 
 3. Apporter les modifications pour être conforme au principe **Liskov Substitution**
 

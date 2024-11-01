@@ -1,6 +1,6 @@
 # Single Responsibility Principle
 
-1. Quelles sont les responsabilités portées par la classe [AccountService](src/main/java/com/codurance/srp/AccountService.java) ?
+1. Quelles sont les responsabilités portées par la classe [AccountService](src/main/java/com/codermaycry/srp/AccountService.java) ?
 
 2. Apporter les modifications pour être conforme au principe **Single Responsibility**
 
