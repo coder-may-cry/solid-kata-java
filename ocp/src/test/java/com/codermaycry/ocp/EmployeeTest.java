@@ -14,7 +14,7 @@ class EmployeeTest {
     @Test
     @DisplayName("should not add bonus to the engineer pay amount")
     void not_add_bonus_to_the_engineer_pay_amount() {
-        var employee = new Employee(SALARY, BONUS, EmployeeType.ENGINEER);
+        var employee = new Engineer(SALARY);
         assertThat(employee.payAmount())
                 .isEqualTo(SALARY);
     }
@@ -22,7 +22,7 @@ class EmployeeTest {
     @Test
     @DisplayName("should add bonus to the manager pay amount")
     void add_bonus_to_the_manager_pay_amount() {
-        var employee = new Employee(SALARY, BONUS, EmployeeType.MANAGER);
+        var employee = new Manager(SALARY, BONUS);
         assertThat(employee.payAmount())
                 .isEqualTo(SALARY + BONUS);
     }

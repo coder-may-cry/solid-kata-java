@@ -1,22 +1,9 @@
 package com.codermaycry.ocp;
 
-public class Employee {
+public abstract class Employee implements Payable {
+    protected int salary;
 
-    private int salary;
-    private int bonus;
-    private EmployeeType type;
-
-    Employee(int salary, int bonus, EmployeeType type) {
+    public Employee(int salary) {
         this.salary = salary;
-        this.bonus = bonus;
-        this.type = type;
     }
-
-    public int payAmount() {
-        return switch (this.type) {
-            case ENGINEER -> salary;
-            case MANAGER -> salary + bonus;
-        };
-    }
-
 }
