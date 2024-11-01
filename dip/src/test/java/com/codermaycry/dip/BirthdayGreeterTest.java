@@ -27,8 +27,7 @@ class BirthdayGreeterTest {
     private EmployeeRepository employeeRepository;
     @Mock
     private Clock clock;
-    @InjectMocks
-    private BirthdayGreeter birthdayGreeter;
+    private final EmailSender emailSender = new EmailSender("smtp.somesever.com");
 
     @Test
     @DisplayName("should send greeting email to employee")
@@ -38,6 +37,7 @@ class BirthdayGreeterTest {
         String recipientEmail = "john.doe@foobar.com";
         Employee employee = new Employee("John", "Doe", LocalDate.of(1980, 9, 10), recipientEmail);
         given(employeeRepository.findEmployeesBornOn(MonthDay.of(CURRENT_MONTH, CURRENT_DAY_OF_MONTH))).willReturn(Collections.singletonList(employee));
+        var birthdayGreeter = new BirthdayGreeter(employeeRepository, clock, emailSender);
 
         birthdayGreeter.sendGreetings();
 
