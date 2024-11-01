@@ -1,11 +1,6 @@
 package com.codermaycry.isp;
 
-public class Dog implements Animal {
-    @Override
-    public void fly() {
-
-    }
-
+public class Dog extends Animal implements Barking, Running {
     @Override
     public void run() {
         System.out.print("Dog is running");
