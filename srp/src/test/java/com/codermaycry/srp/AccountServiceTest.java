@@ -42,7 +42,8 @@ class AccountServiceTest {
 
     @BeforeEach
     public void setUp() {
-        accountService = new AccountService(transactionRepository, clock, console);
+        StatementPrinter statementPrinter = new StatementPrinter(console);
+        accountService = new AccountService(transactionRepository, clock, statementPrinter);
     }
 
     private void setupClock() {
