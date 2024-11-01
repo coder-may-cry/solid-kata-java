@@ -31,15 +31,5 @@ class VehicleTest {
                 .isFalse();
     }
 
-    static class TestableVehicle extends Vehicle {
-        @Override
-        public void fillUpWithFuel() {
-
-        }
-
-        @Override
-        public void chargeBattery() {
-
-        }
-    }
+    static class TestableVehicle extends Vehicle {}
 }

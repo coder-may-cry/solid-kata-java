@@ -2,15 +2,11 @@ package com.codermaycry.lsp;
 
 public class FillingStation {
 
-    public void refuel(Vehicle vehicle) {
-        if (vehicle instanceof PetrolCar) {
-            vehicle.fillUpWithFuel();
-        }
+    public void refuel(PetrolCar vehicle) {
+        vehicle.fillUpWithFuel();
     }
 
-    public void charge(Vehicle vehicle) {
-        if (vehicle instanceof ElectricCar) {
-            vehicle.chargeBattery();
-        }
+    public void charge(ElectricCar vehicle) {
+        vehicle.chargeBattery();
     }
 }
